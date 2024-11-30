@@ -1,11 +1,163 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>início</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Pixelify+Sans:wght@400..700&family=Quicksand:wght@300..700&family=Tiny5&display=swap');
+
+        #area{
+            display: flex;
+            
+            height: 805px;
+            margin: 0;
+            font-family: "Cutive Mono", monospace;
+  font-weight: 400;
+            
+        }
+
+        #container1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 620px;
+            min-height: 750px;
+            background-color: thistle;
+            padding: 1em;
+            margin: auto;
+            margin-left: 0;
+            border: 1px solid gray;
+
+        }
+        #container2{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 620px;
+            min-height: 750px;
+           
+            background-color: rgb(219, 219, 219);
+            padding: 1em;
+            margin: auto;
+            border: 1px solid gray;
+        }
+
+        .blocos {
+            padding: 10px;
+            margin: 10px;
+            width: 80%;
+            border: 1px black solid;
+            font-weight: 600;
+            font-family: "Cutive Mono", monospace;
+  font-weight: 400;
+        }
+
+        #botao{
+            width: 3em;
+        }
+
+        #texto {
+            width: 80%;
+            min-height: 400px;
+            padding: 10px;
+            font-weight: 600;
+            font-family: "Cutive Mono", monospace;
+  font-weight: 400;
+        }
+
+        #grupoa{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.329);
+            margin-top: 0;
+            
+        }
+
+        .banner{
+            width: 90%;
+            height: auto;
+            border: 1px solid gray;
+        }
+
+        #card{
+            margin-top: 4em;
+            background-image: URL(aspiral.jpg);
+            background-size: cover;
+            padding: 2em;
+            font-size: 17px;
+            color: rgb(0, 0, 0);
+            text-shadow: 1px 1px 1px rgb(255, 255, 255);
+            border: 1px solid rgb(255, 255, 255);
+        }
+
+        #toptexto{
+            font-size: 3em;
+            font-weight: 600;
+            margin-bottom: 0;
+            color: rgba(177, 175, 175, 0.418);
+            text-shadow: 1px 1px 1px rgb(77, 74, 74);
+        }
+
+        .partea{
+            padding: 2em;
+        }
+
+        #a1{
+            text-align: center;
+            color: rgb(73, 71, 71);
+            font-size: 13px;
+        }
+
+        #a2{
+            width: 200px;
+            height: auto;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div id="area">
+        <div id="container2">
+            <p id="toptexto">d i a r y _ n o t e</p>
+            <div id="grupoa">
+                <p id="a1" class="partea">Escrever e registrar como foi o seu dia é importante para o seu gerencionamento emocional, ajuda a perceber melhor os problemas à sua volta e a entender a maneira como você pensava em determinado momento. Escreva e mereça ;)</p>
+                <img id="a2" src="caderninho.png" class="partea"></img>
+            </div>
+            <div id="card">
+                <p id="a3">
+                    aqui nós podemos ser tudo o que queremos ser . Escreva na caixa ao lado, dê um nome ao arquivo e é apenas clicar no botão abaixo para baixar o seu registro de texto localmente.
+                </p>
+            </div>
+        </div>
+        <div id="container1">
+            <input type="text" id="entrada" class="blocos">
+            <textarea name="eae" id="texto"></textarea>
+            <button id="botao" class="blocos">💾</button>
+        </div>
+        
+    </div>
+
+
+    <script>
+        const baixar = () => {
+            const titulo = document.getElementById('entrada').value;
+            const otexto = document.getElementById('texto').value;
+            const blob = new Blob([otexto], { type: 'text/plain' });
+
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = titulo;
+            link.click();
+
+            URL.remokeObjectURL(link.href);
+        }
+
+        const botao = document.getElementById('botao');
+        botao.addEventListener('click', baixar);
+    </script>
 </body>
+
 </html>
