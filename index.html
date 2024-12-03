@@ -7,14 +7,262 @@
     <title>início</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Pixelify+Sans:wght@400..700&family=Quicksand:wght@300..700&family=Tiny5&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Faculty+Glyphic&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Pixelify+Sans:wght@400..700&family=Quicksand:wght@300..700&family=Tiny5&family=Workbench&display=swap');
+        
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
         @font-face {
             font-family: 'bold';
             src: url(fonts/Akira-Expanded-Demo.woff) format(woff);
         }
 
+        @media(min-width:100px){
+            #area {
+            display: grid;
+           
+
+            grid-template-columns: repeat(5,auto);
+            grid-template-rows: repeat(4,auto);
+
+            height: 805px;
+            margin: 10px;
+            gap: 20px;
+            font-family: "Faculty Glyphic", sans-serif;
+            
+            font-weight: 400;
+            }
 
             body{
-                background-color: black;
+                background-color: rgb(255, 255, 255);
+            }
+        
+
+        #container2 {
+            display: grid;
+            height: 350px;
+            grid-template-rows: 1/10;
+            grid-template-columns: repeat(3,auto);
+
+            grid-column: 1/5;
+            grid-row: 1/2;
+            position: relative;
+            overflow: hidden;
+          
+            background-color: rgb(219, 219, 219);
+            padding: 1em;
+            gap: 0em;
+            margin: auto;
+            border: 1px solid gray;
+            border-radius: 50px 0 0 50px;
+        }
+
+
+        #container1 {
+            display: grid;
+            grid-template-columns: repeat(3,auto);
+            grid-template-rows: repeat(10,auto);
+
+            grid-column: 1/5;
+            grid-row: 2/3;
+            gap: 10px;
+
+            background-color: thistle;
+            padding: 1em;
+            
+           
+            border: 1px solid gray;
+            border-radius: 50px 0 0 50px;
+
+        }
+
+        
+        #container3{
+            display: grid;
+            grid-column: 1/5;
+            grid-row: 3/4;
+
+            grid-template-columns: repeat(5,auto);
+            grid-template-rows: repeat(5,auto);
+            
+            
+            /* grid-row: 2/4; */
+
+            background-color: rgb(219, 219, 219);
+            padding: 1em;
+            
+            border: 1px solid gray;
+            border-radius: 50px 0 0 50px;
+        }
+
+        .blocos {
+            padding: 10px;
+            margin: 10px;
+            width: 80%;
+            border: 1px black solid;
+            font-weight: 600;
+            font-family: "Cutive Mono", monospace;
+            font-weight: 400;
+        }
+
+        #botao {
+            width: 5em;
+            padding: 2em;
+            padding: 0;
+            height: 5em;
+            
+
+            grid-column: 4/4;
+            grid-row: 5/5;
+            margin-right: 3em;
+            border-radius: 10px;
+        }
+
+        #texto {
+            width: 220px;
+            min-height: 300px;
+            padding: 10px;
+            font-weight: 600;
+            font-family: "Cutive Mono", monospace;
+            font-weight: 400;
+            grid-row: 2/10;
+            border-radius: 25px;
+        }
+
+        #entrada{
+            width: 220px;
+            padding: 10px;
+            margin: 0;
+            grid-column: 2/3;
+            grid-row: 1/2;
+            border-radius: 25px;
+        }
+
+        #a5 {
+            text-align: justify;
+            grid-row: 1/10;
+            width: 200px;
+            grid-column: 1/2;
+            padding: 2em 4em 2em 2em;
+            color: rgb(31, 31, 31);
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.199);
+            font-size: 16px;
+        }
+
+
+        #grupoa {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            grid-column: 2/3;
+            margin: 0;
+
+        }
+
+        .banner {
+            width: 90%;
+            height: auto;
+            border: 1px solid gray;
+        }
+
+        #card {
+
+            font-size: 17px;
+            color: rgb(0, 0, 0);
+            text-shadow: 1px 1px 1px rgb(255, 255, 255);
+            width: 400px;
+            height: auto;
+            border: 1px solid rgb(134, 134, 134);
+            display: flex;
+            flex-direction: row;
+            padding: 2em;
+            background-color: aliceblue;
+        }
+
+        #i3 {
+            width: 190px;
+            height: 150px;
+            margin: 1em;
+            float: inherit;
+        }
+
+        #a3 {font-weight: 500;
+            color: rgb(0, 0, 0);
+            text-shadow: 2px 2px 9px rgb(187, 187, 187);
+            font-size: 16px;
+            padding: 1em;
+            
+            text-align: right;
+        }
+
+
+        #toptexto {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            font-size: 35px;
+            font-weight: 600;
+            margin-left: 1em;
+            margin-bottom: 0;
+
+            
+            width: 160%;
+            font-family: 'bold';
+            color: rgb(0, 0, 0);
+            text-shadow: 2px 2px 1px rgb(255, 255, 255);
+        }
+
+        .partea {
+            padding: 2em;
+        }
+
+        #a1 {
+            grid-column: 1/2;
+            grid-row: 2/10;
+            width: 160%;
+            text-align: center;
+            grid-column: 1/2;
+            color: rgb(31, 31, 31);
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.199);
+            font-size: 12px;
+
+        }
+
+        #a2 {
+            grid-column: 2/3;
+            grid-row: 1/10;
+            width: auto;
+            margin: 0;
+            
+            height: 330px;
+            position: relative;
+            
+            left: 8em;
+            bottom: 6em;
+            
+            
+        }
+        #down{
+            font-size: 3em;
+        }
+        }
+
+
+
+
+        @media(min-width:500px){
+            #area {
+            display: grid;
+            grid-template-columns: repeat(5,auto);
+            grid-template-rows: repeat(3,auto);
+
+            height: 805px;
+            margin: 10px;
+            gap: 20px;
+            font-family: "Faculty Glyphic", sans-serif;
+            
+            font-weight: 400;
+            }
+
+            body{
+                background-color: rgb(255, 255, 255);
             }
         
 
@@ -24,9 +272,10 @@
             grid-template-rows: repeat(3,auto);
 
             height: 805px;
-            margin: 0;
-            gap: 10px;
-            font-family: "Cutive Mono", monospace;
+            margin: 10px;
+            gap: 20px;
+            font-family: "Faculty Glyphic", sans-serif;
+            
             font-weight: 400;
         }
 
@@ -98,9 +347,10 @@
         }
 
         #botao {
-            width: 3em;
+            width: 5em;
             padding: 2em;
-            height: 30px;
+            padding: 0;
+            height: 5em;
             
 
             grid-column: 4/4;
@@ -131,11 +381,12 @@
 
         #a5 {
             text-align: justify;
+            
             grid-row: 1/10;
             grid-column: 1/2;
             padding: 2em 4em 2em 2em;
-            color: rgb(0, 0, 0);
-            text-shadow: 1px 1px 1px rgb(255, 255, 255);
+            color: rgb(31, 31, 31);
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.199);
             font-size: 16px;
         }
 
@@ -176,12 +427,12 @@
             float: inherit;
         }
 
-        #a3 {
+        #a3 {font-weight: 500;
             color: rgb(0, 0, 0);
-            font-weight: 500;
+            text-shadow: 2px 2px 9px rgb(187, 187, 187);
             font-size: 16px;
             padding: 1em;
-            text-shadow: 2px 2px 9px rgb(187, 187, 187);
+            
             text-align: right;
         }
 
@@ -189,7 +440,7 @@
         #toptexto {
             grid-column: 1/2;
             grid-row: 1/2;
-            font-size: 55px;
+            font-size: 50px;
             font-weight: 600;
             margin: 0;
             
@@ -206,11 +457,12 @@
             grid-column: 1/2;
             grid-row: 2/10;
             width: 80%;
-            text-align: justify;
+            text-align: center;
             grid-column: 1/2;
-            color: rgb(0, 0, 0);
-            text-shadow: 1px 1px 1px rgb(255, 255, 255);
-            font-size: 13px;
+            color: rgb(31, 31, 31);
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.199);
+            font-size: 14px;
+
         }
 
         #a2 {
@@ -225,7 +477,15 @@
             right: 0em;
             bottom: 6em;
             
+            
         }
+        #down{
+            font-size: 3em;
+        }
+        }
+
+
+            
         
 
         
@@ -260,7 +520,7 @@
             <p id="a5">
                Clicando no botão ao lado, você irá baixar automaticamente o arquivo localmente, depois disso você pode salvar em alguma pasta do seu dispositivo ou fazer upload na núvem. 
             </p>
-             <button id="botao" class="blocos">💾</button>
+             <button id="botao" class="blocos"><i id="down" class="bi bi-download"></i></button>
         </div>
 
     </div>
