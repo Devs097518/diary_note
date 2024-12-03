@@ -13,63 +13,78 @@
         }
 
 
-        @media(min-width: 100px){
-            
             body{
-                background-image: url(jornais.jpg);
-                background-repeat: repeat;
-            }
-
-            #area {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                
-
-                height: 805px;
-                /* margin: 0; */
-                font-family: "Cutive Mono", monospace;
-                font-weight: 400;
-
+                background-color: black;
             }
         
-/* 
+
         #area {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(5,auto);
+            grid-template-rows: repeat(3,auto);
+
             height: 805px;
             margin: 0;
+            gap: 10px;
             font-family: "Cutive Mono", monospace;
             font-weight: 400;
-
-        } */
-
-        #container1 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 90%;
-            min-height: 750px;
-            background-color: thistle;
-            padding: 1em;
-            margin: auto;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            border: 1px solid gray;
-
         }
 
         #container2 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 90%;
-            /* min-height: 750px; */
+            display: grid;
+            height: 350px;
+            grid-template-rows: 1/10;
+            grid-template-columns: repeat(3,auto);
+
+            grid-column: 1/5;
+            grid-row: 1/2;
+            position: relative;
+            overflow: hidden;
+          
+            background-color: rgb(219, 219, 219);
+            padding: 1em;
+            gap: 0em;
+            margin: auto;
+            border: 1px solid gray;
+            border-radius: 50px;
+        }
+
+
+        #container1 {
+            display: grid;
+            grid-template-columns: repeat(3,auto);
+            grid-template-rows: repeat(10,auto);
+
+            grid-column: 1/3;
+            grid-row: 2/3;
+            gap: 10px;
+
+            background-color: thistle;
+            padding: 1em;
+          
+           
+            border: 1px solid gray;
+            border-radius: 50px;
+
+        }
+
+        
+        #container3{
+            display: grid;
+            grid-column: 3/5;
+            grid-row: 2/3;
+
+            grid-template-columns: repeat(5,auto);
+            grid-template-rows: repeat(5,auto);
+
+            
+            /* grid-row: 2/4; */
 
             background-color: rgb(219, 219, 219);
             padding: 1em;
-            margin: auto;
-            border: 1px solid gray;
             
+            border: 1px solid gray;
+            border-radius: 50px;
         }
 
         .blocos {
@@ -84,182 +99,52 @@
 
         #botao {
             width: 3em;
-            box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.281);
+            padding: 2em;
+            height: 30px;
+            
 
+            grid-column: 4/4;
+            grid-row: 5/5;
+            margin-right: 3em;
+            border-radius: 10px;
+        }
+
+        #texto {
+            width: 300px;
+            min-height: 300px;
+            padding: 10px;
+            font-weight: 600;
+            font-family: "Cutive Mono", monospace;
+            font-weight: 400;
+            grid-row: 2/10;
+            border-radius: 25px;
         }
 
         #entrada{
-            box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.281);
-        }
-
-        #texto {
-            width: 80%;
-            min-height: 400px;
+            width: 300px;
             padding: 10px;
-            font-weight: 600;
-            font-family: "Cutive Mono", monospace;
-            font-weight: 400;
-            box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.281);
-        }
-
-        #grupoa {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
             margin: 0;
-
+            grid-column: 2/3;
+            grid-row: 1/2;
+            border-radius: 25px;
         }
 
-        .banner {
-            width: 90%;
-            height: auto;
-            border: 1px solid gray;
-        }
-
-        #card {
-            font-size: 17px;
-            color: rgb(0, 0, 0);
-            font-size: 1px;
-            text-shadow: 1px 1px 1px rgb(255, 255, 255);
-            width: 70%;
-            height: auto;
-            border: 1px solid rgb(105, 105, 105);
-            display: flex;
-            flex-direction: column;
-            padding: 2em;
-            background-color: aliceblue;
-            box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.281);
-        }
-
-        #i3 {
-            width: 190px;
-            height: 150px;
-            margin: 1em;
-            float: inherit;
-        }
-
-        #a3 {
-            color: rgb(0, 0, 0);
-            font-weight: 500;
-            font-size: 16px;
-            padding: 1em;
-            text-shadow: 2px 2px 9px rgb(187, 187, 187);
-            text-align: right;
-        }
-
-
-        #toptexto {
-            font-size: 45px;
-            font-weight: 600;
-            margin: 0;
-            font-family: 'bold';
-            color: rgb(255, 255, 255);
-            text-shadow: 2px 2px 1px rgb(77, 74, 74);
-        }
-
-        .partea {
-            padding: 2em;
-        }
-
-        #a1 {
+        #a5 {
             text-align: justify;
+            grid-row: 1/10;
+            grid-column: 1/2;
+            padding: 2em 4em 2em 2em;
             color: rgb(0, 0, 0);
             text-shadow: 1px 1px 1px rgb(255, 255, 255);
-            font-size: 13px;
+            font-size: 16px;
         }
 
-        #a2 {
-            width: 200px;
-            height: auto;
-            display: none;
-        }
-        }
-
-        @media(min-width: 600px){
-            
-            body{
-                background-image: url(jornais.jpg);
-                background-repeat: repeat;
-            }
-
-            #area {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                
-
-                height: 805px;
-                /* margin: 0; */
-                font-family: "Cutive Mono", monospace;
-                font-weight: 400;
-
-            }
-        
-/* 
-        #area {
-            display: flex;
-            height: 805px;
-            margin: 0;
-            font-family: "Cutive Mono", monospace;
-            font-weight: 400;
-
-        } */
-
-        #container1 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 620px;
-            min-height: 750px;
-            background-color: thistle;
-            padding: 1em;
-            margin: auto;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            border: 1px solid gray;
-
-        }
-
-        #container2 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 620px;
-            min-height: 750px;
-
-            background-color: rgb(219, 219, 219);
-            padding: 1em;
-            margin: auto;
-            border: 1px solid gray;
-        }
-
-        .blocos {
-            padding: 10px;
-            margin: 10px;
-            width: 80%;
-            border: 1px black solid;
-            font-weight: 600;
-            font-family: "Cutive Mono", monospace;
-            font-weight: 400;
-        }
-
-        #botao {
-            width: 3em;
-        }
-
-        #texto {
-            width: 80%;
-            min-height: 400px;
-            padding: 10px;
-            font-weight: 600;
-            font-family: "Cutive Mono", monospace;
-            font-weight: 400;
-        }
 
         #grupoa {
             display: flex;
             justify-content: space-around;
             align-items: center;
+            grid-column: 2/3;
             margin: 0;
 
         }
@@ -302,12 +187,15 @@
 
 
         #toptexto {
-            font-size: 45px;
+            grid-column: 1/2;
+            grid-row: 1/2;
+            font-size: 55px;
             font-weight: 600;
             margin: 0;
+            
             font-family: 'bold';
-            color: rgb(255, 255, 255);
-            text-shadow: 2px 2px 1px rgb(77, 74, 74);
+            color: rgb(0, 0, 0);
+            text-shadow: 2px 2px 1px rgb(255, 255, 255);
         }
 
         .partea {
@@ -315,18 +203,30 @@
         }
 
         #a1 {
+            grid-column: 1/2;
+            grid-row: 2/10;
+            width: 80%;
             text-align: justify;
+            grid-column: 1/2;
             color: rgb(0, 0, 0);
             text-shadow: 1px 1px 1px rgb(255, 255, 255);
             font-size: 13px;
         }
 
         #a2 {
-            width: 200px;
-            height: auto;
-            display: flex;
+            grid-column: 2/3;
+            grid-row: 1/10;
+            width: auto;
+            margin: 0;
+            
+            height: 450px;
+            position: relative;
+            
+            right: 0em;
+            bottom: 6em;
+            
         }
-        }
+        
 
         
 
@@ -337,30 +237,30 @@
     <div id="area">
         <div id="container2">
             <p id="toptexto">d i a r y _ n o t e</p>
-            <div id="grupoa">
+            
                 <p id="a1" class="partea">Escrever e registrar como foi o seu dia é importante para o seu
                     gerencionamento emocional, ajuda a perceber melhor os problemas à sua volta e a entender a maneira
                     como você pensava em determinado momento. Aqui você pratica a escrita online, que possui muitas
                     vantagens, como ter registros mais privacidade e capaz de guardar em pastas específicas, tanto
                     localmente quanto na núvem, sendo capaz de permanecer com aquelas informações que você escreveu de
                     forma mais organizada e segura.</p>
-                <img id="a2" src="caderninho.png" class="partea"></img>
-            </div>
-            <div id="card">
-                <img id="i3" src="teclado.gif" alt="">
-                <p id="a3">
-
-                    aqui nós podemos ser tudo o que queremos ser . Escreva na caixa ao lado, dê um nome ao arquivo e é
-                    apenas clicar no botão abaixo para baixar o seu registro de texto localmente.
-
-                </p>
-            </div>
-
+                <img id="a2" src="writer.png" class="partea"></img>
+            
+           
         </div>
         <div id="container1">
+            <p id="a5">
+                No campo superior, dê um nome para o arquivo de texto que será criado. No Campo abaixo, digite o texto que fará parte do conteúdo salvo.
+            </p>
             <input type="text" id="entrada" class="blocos">
             <textarea name="eae" id="texto"></textarea>
-            <button id="botao" class="blocos">💾</button>
+           
+        </div>
+        <div id="container3">
+            <p id="a5">
+               Clicando no botão ao lado, você irá baixar automaticamente o arquivo localmente, depois disso você pode salvar em alguma pasta do seu dispositivo ou fazer upload na núvem. 
+            </p>
+             <button id="botao" class="blocos">💾</button>
         </div>
 
     </div>
